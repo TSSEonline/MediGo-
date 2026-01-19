@@ -1,161 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediGo | Modernized Website</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: #333;
-            /* Enhancement: Smoother background gradient */
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        /* Header & Logo Enhancement */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); /* Enhancement: Trendy blur effect */
-            padding: 60px 20px 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-        }
+  <title>MediGo Couriers LLC | HIPAA-Compliant Medical Delivery</title>
+  <meta name="description" content="Professional HIPAA-compliant medical courier services for hospitals, laboratories, clinics, and pharmacies." />
 
-        .logo {
-            /* BIG LOGO REQUIREMENT */
-            width: 500px; 
-            max-width: 90%; 
-            height: auto;
-            margin-bottom: 30px;
-            /* Enhancement: Smooth entrance and crisp rendering */
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .logo:hover {
-            transform: scale(1.03);
-            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-        }
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    
+    /* ENHANCEMENT: Subtle fade-in for sections */
+    section {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #444;
-            font-size: 0.85rem;
-            position: relative;
-            transition: color 0.3s;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        /* Enhancement: Underline hover effect */
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #007bff;
-            transition: width 0.3s;
-        }
+    /* BIG LOGO STYLING */
+    .big-logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+    }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+    .main-logo {
+      width: 450px; /* ENLARGED LOGO */
+      max-width: 90%;
+      height: auto;
+      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.08));
+      transition: transform 0.3s ease;
+    }
 
-        nav a:hover {
-            color: #007bff;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 900px;
-            margin: 60px auto;
-            background: #ffffff;
-            padding: 50px;
-            border-radius: 15px; /* Enhancement: Softer corners */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-
-        h1 {
-            color: #1a1a1a;
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .hero-text {
-            font-size: 1.25rem;
-            color: #555;
-            margin-bottom: 35px;
-            font-weight: 300;
-        }
-
-        /* Enhancement: Call to Action Button */
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            box-shadow: 0 8px 20px rgba(0,123,255,0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(0,123,255,0.4);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            font-size: 0.9rem;
-            color: #666;
-        }
-    </style>
+    .main-logo:hover {
+      transform: scale(1.02);
+    }
+  </style>
 </head>
-<body>
 
-    <header>
-        <img src="MediGo logo.PNG" alt="MediGo Logo" class="logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+<body class="bg-slate-50 text-slate-700">
+
+<header class="bg-white border-b border-slate-200">
+  <div class="big-logo-container">
+    <img
+      src="MediGo logo.PNG"
+      alt="MediGo Couriers LLC Logo"
+      class="main-logo"
+    />
+  </div>
+
+  <div class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        
+        <nav class="hidden md:flex gap-10 text-sm font-bold uppercase tracking-wide">
+          <a href="#services" class="text-slate-600 hover:text-emerald-600 transition">Services</a>
+          <a href="#why" class="text-slate-600 hover:text-emerald-600 transition">Why Us</a>
+          <a href="#coverage" class="text-slate-600 hover:text-emerald-600 transition">Coverage</a>
+          <a href="#contact" class="text-slate-600 hover:text-emerald-600 transition">Contact</a>
         </nav>
-    </header>
 
-    <div class="container">
-        <h1>Welcome to Your New Site</h1>
-        <p class="hero-text">We’ve enhanced the layout to prioritize your brand and improve user experience.</p>
-        
-        <p>This layout uses a clean white container to make your content "pop" against the light grey background. We've also added a subtle hover effect to the logo and a clear call-to-action button below.</p>
-        
-        <a href="#" class="cta-button">Get Started Today</a>
+        <a href="#contact" class="px-6 py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-full font-bold hover:shadow-lg transition transform hover:-translate-y-0.5">
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="pt-24 pb-32 bg-gradient-to-br from-[#0f4c75] via-[#123c69] to-[#0b1c2d] text-white">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+    <div>
+      <span class="inline-block mb-6 px-4 py-2 text-sm font-semibold rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+        HIPAA-Compliant • Secure • Reliable
+      </span>
+
+      <h1 class="text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
+        Medical Courier Services<br>
+        You Can Trust
+      </h1>
+
+      <p class="text-white/70 text-lg max-w-xl mb-10">
+        MediGo Couriers LLC specializes in secure, on-time medical delivery for
+        hospitals, laboratories, clinics, pharmacies, and healthcare providers.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="px-8 py-4 bg-emerald-600 rounded-full font-bold hover:bg-emerald-500 shadow-xl transition">
+          Get a Quote
+        </a>
+        <a href="tel:7579498206" class="px-8 py-4 border border-white/30 rounded-full font-bold hover:bg-white/10 transition">
+          Call 757-949-8206
+        </a>
+      </div>
     </div>
 
-    <footer>
-        &copy; 2026 MediGo Couriers LLC. All rights reserved.
-    </footer>
+    <div class="hidden lg:flex justify-center">
+      <div class="w-96 h-96 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center shadow-2xl">
+        <span class="text-8xl">🏥</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="services" class="py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-20">
+      <h2 class="text-4xl font-bold text-[#0f4c75] mb-4">
+        Our Medical Delivery Services
+      </h2>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        Designed to meet strict healthcare compliance and time-sensitive needs.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:border-emerald-200 transition-all duration-300">
+        <h3 class="font-bold text-xl mb-2 text-[#0f4c75]">🧪 Specimen Transport</h3>
+        <p class="text-slate-600">Chain-of-custody handling with temperature control for laboratory integrity.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:border-emerald-200 transition-all duration-300">
+        <h3 class="font-bold text-xl mb-2 text-[#0f4c75]">📁 Medical Records</h3>
+        <p class="text-slate-600">Secure transport of confidential documentation and sensitive patient files.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:border-emerald-200 transition-all duration-300">
+        <h3 class="font-bold text-xl mb-2 text-[#0f4c75]">💊 Pharmacy Delivery</h3>
+        <p class="text-slate-600">Direct-to-patient or facility prescription and pharmaceutical deliveries.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:border-emerald-200 transition-all duration-300">
+        <h3 class="font-bold text-xl mb-2 text-[#0f4c75]">🏥 Hospital Routes</h3>
+        <p class="text-slate-600">Scheduled and STAT hospital delivery routes to keep your facility running.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:border-emerald-200 transition-all duration-300">
+        <h3 class="font-bold text-xl mb-2 text-[#0f4c75]">⏱️ STAT & Scheduled</h3>
+        <p class="text-slate-600">Urgent 1-hour windows and routine daily deliveries handled professionally.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:border-emerald-200 transition-all duration-300">
+        <h3 class="font-bold text-xl mb-2 text-[#0f4c75]">🔒 HIPAA Compliance</h3>
+        <p class="text-slate-600">Strict privacy training and security standards for every single driver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="py-28 bg-slate-100">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-[#0f4c75] mb-6">Why Choose MediGo?</h2>
+    <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-10">
+      We understand healthcare delivery demands precision, trust, and accountability.
+      Our team is trained, insured, and committed to excellence.
+    </p>
+    <div class="inline-flex items-center gap-2 text-emerald-600 font-bold">
+        <span>Trust</span> • <span>Precision</span> • <span>Care</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-28 bg-[#0f4c75] text-white text-center">
+  <h2 class="text-4xl font-bold mb-6">Ready to Coordinate Your Delivery?</h2>
+  <p class="text-white/70 mb-10 text-lg">
+    Contact us now for a customized quote or to set up a new route.
+  </p>
+
+  <div class="flex flex-col sm:flex-row justify-center gap-6">
+    <a href="tel:7579498206" class="px-10 py-4 bg-emerald-600 rounded-full font-bold hover:scale-105 transition shadow-lg">
+      Call 757-949-8206
+    </a>
+    <a href="mailto:info@medigocouriers.com" class="px-10 py-4 border border-white/30 rounded-full font-bold hover:bg-white/10 transition">
+      Email Us
+    </a>
+  </div>
+</section>
+
+<footer class="py-12 bg-slate-900 text-center text-slate-400 text-sm">
+  <img src="MediGo logo.PNG" alt="MediGo" class="h-8 w-auto mx-auto mb-6 opacity-50 grayscale" />
+  <p>© 2026 MediGo Couriers LLC. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
