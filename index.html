@@ -1,174 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediGo | Healthcare Solutions</title>
+    <style>
+        /* Modern Medical Theme Colors */
+        :root {
+            --primary-blue: #0056b3;
+            --soft-blue: #eef4fb;
+            --accent-teal: #20c997;
+            --dark-text: #2c3e50;
+        }
 
-  <title>MediGo Couriers LLC | HIPAA-Compliant Medical Delivery</title>
-  <meta name="description" content="Professional HIPAA-compliant medical courier services for hospitals, laboratories, clinics, and pharmacies." />
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #f4f7f9;
+        }
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+        /* Header & Large Logo Section */
+        header {
+            background: #ffffff;
+            padding: 50px 20px 30px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
 
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        .logo {
+            max-width: 400px; /* Increased size for impact */
+            height: auto;
+            margin-bottom: 25px;
+            /* Smooth entrance animation */
+            animation: fadeIn 1s ease-in;
+        }
 
-  <style>
-    * { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
-  </style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Enhancement */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Main Content Enhancement */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+            margin-top: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-teal);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #17a67d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
+<body>
 
-<body class="bg-slate-50 text-slate-700">
+    <header>
+        <img src="MediGo logo.PNG" alt="MediGo Logo" class="logo">
+        
+        <nav>
+            <a href="#">Patient Portal</a>
+            <a href="#">Find a Doctor</a>
+            <a href="#">Our Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-<!-- NAVBAR -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-20">
-
-      <!-- LOGO (USING EXISTING FILE) -->
-      <img
-        src="MediGo logo.PNG"
-        alt="MediGo Couriers LLC Logo"
-        class="h-12 w-auto"
-      />
-
-      <!-- NAV -->
-      <nav class="hidden md:flex gap-8 text-sm font-semibold">
-        <a href="#services" class="hover:text-emerald-600">Services</a>
-        <a href="#why" class="hover:text-emerald-600">Why Us</a>
-        <a href="#coverage" class="hover:text-emerald-600">Coverage</a>
-        <a href="#contact" class="hover:text-emerald-600">Contact</a>
-      </nav>
-
-      <!-- CTA -->
-      <a href="#contact" class="px-6 py-3 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition">
-        Request a Quote
-      </a>
-    </div>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="pt-40 pb-32 bg-gradient-to-br from-[#0f4c75] via-[#123c69] to-[#0b1c2d] text-white">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
-    <div>
-      <span class="inline-block mb-6 px-4 py-2 text-sm font-semibold rounded-full bg-emerald-500/20 text-emerald-300">
-        HIPAA-Compliant • Secure • Reliable
-      </span>
-
-      <h1 class="text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
-        Medical Courier Services<br>
-        You Can Trust
-      </h1>
-
-      <p class="text-white/70 text-lg max-w-xl mb-10">
-        MediGo Couriers LLC specializes in secure, on-time medical delivery for
-        hospitals, laboratories, clinics, pharmacies, and healthcare providers.
-      </p>
-
-      <div class="flex flex-wrap gap-4">
-        <a href="#contact" class="px-8 py-4 bg-emerald-600 rounded-full font-bold hover:scale-105 transition">
-          Get a Quote
-        </a>
-        <a href="tel:7579498206" class="px-8 py-4 border border-white/30 rounded-full font-bold hover:bg-white/10 transition">
-          Call 757-949-8206
-        </a>
-      </div>
+    <div class="container">
+        <h1>Advanced Care, Delivered.</h1>
+        <p>Welcome to <strong>MediGo</strong>. We have enhanced our digital presence to ensure you can access care quickly and efficiently. Our new interface is designed to put your health first.</p>
+        
+        <a href="#" class="cta-button">Book an Appointment</a>
     </div>
 
-    <!-- CLEAN MEDICAL VISUAL -->
-    <div class="hidden lg:flex justify-center">
-      <div class="w-96 h-96 rounded-3xl bg-white/10 backdrop-blur flex items-center justify-center">
-        <span class="text-8xl">🏥</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <div class="text-center mb-20">
-      <h2 class="text-4xl font-bold text-[#0f4c75] mb-4">
-        Our Medical Delivery Services
-      </h2>
-      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
-        Designed to meet strict healthcare compliance and time-sensitive needs.
-      </p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="p-8 rounded-2xl border bg-slate-50 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl mb-2">🧪 Specimen Transport</h3>
-        <p>Chain-of-custody handling with temperature control.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border bg-slate-50 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl mb-2">📁 Medical Records</h3>
-        <p>Secure transport of confidential documentation.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border bg-slate-50 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl mb-2">💊 Pharmacy Delivery</h3>
-        <p>Prescription and pharmaceutical deliveries.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border bg-slate-50 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl mb-2">🏥 Hospital Routes</h3>
-        <p>Scheduled and STAT hospital delivery routes.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border bg-slate-50 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl mb-2">⏱️ STAT & Scheduled</h3>
-        <p>Urgent and routine deliveries handled professionally.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border bg-slate-50 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl mb-2">🔒 HIPAA Compliance</h3>
-        <p>Strict privacy and security standards.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section id="why" class="py-28 bg-slate-100">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold text-[#0f4c75] mb-6">Why Choose MediGo?</h2>
-    <p class="text-lg text-slate-600 max-w-3xl mx-auto">
-      We understand healthcare delivery demands precision, trust, and accountability.
-      Our team is trained, insured, and committed to excellence.
-    </p>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-28 bg-[#0f4c75] text-white text-center">
-  <h2 class="text-4xl font-bold mb-6">Request a Medical Delivery Quote</h2>
-  <p class="text-white/70 mb-10">
-    Call or email us today to discuss your delivery needs.
-  </p>
-
-  <div class="flex flex-col sm:flex-row justify-center gap-6">
-    <a href="tel:7579498206" class="px-10 py-4 bg-emerald-600 rounded-full font-bold hover:scale-105 transition">
-      Call 757-949-8206
-    </a>
-    <a href="mailto:info@medigocouriers.com" class="px-10 py-4 border border-white/30 rounded-full font-bold hover:bg-white/10 transition">
-      Email Us
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-10 bg-slate-900 text-center text-slate-400 text-sm">
-  © 2026 MediGo Couriers LLC. All Rights Reserved.
-</footer>
+    <footer>
+        &copy; 2026 MediGo Healthcare. All rights reserved.
+    </footer>
 
 </body>
 </html>
