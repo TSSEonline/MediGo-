@@ -1,426 +1,165 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediGo Couriers LLC - HIPAA-Compliant Medical Courier Services</title>
+
+  <title>MediGo Couriers LLC | HIPAA-Compliant Medical Courier Services</title>
+  <meta name="description" content="MediGo Couriers LLC provides HIPAA-compliant, secure, and on-time medical courier services throughout the Hampton Roads area.">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/_sdk/element_sdk.js"></script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      box-sizing: border-box;
-    }
     * {
       font-family: 'Plus Jakarta Sans', sans-serif;
+      box-sizing: border-box;
     }
+
     html {
       scroll-behavior: smooth;
     }
+
     .gradient-bg {
       background: linear-gradient(135deg, #0f4c75 0%, #1a237e 50%, #0d2137 100%);
     }
+
     .card-hover {
-      transition: all 0.3s ease;
+      transition: transform .3s ease;
     }
+
     .card-hover:hover {
       transform: translateY(-4px);
     }
+
     .pulse-ring {
       animation: pulse-ring 2s infinite;
     }
+
     @keyframes pulse-ring {
-      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(16,185,129,.4); }
+      70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); }
+      100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
     }
+
     .float-animation {
       animation: float 3s ease-in-out infinite;
     }
+
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
+      0%,100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full">
-  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Navigation -->
-   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: rgba(15, 76, 117, 0.95); backdrop-filter: blur(10px);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="flex justify-between items-center h-16 sm:h-20">
-      <div class="flex items-center gap-2 sm:gap-3">
-       <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center" style="background: #10b981;">
-        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-       </div><span class="text-lg sm:text-xl font-bold text-white">MediGo</span>
-      </div>
-      <div class="hidden md:flex items-center gap-8"><a href="#about" class="text-white/80 hover:text-white transition-colors text-sm font-medium">About</a> <a href="#services" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Services</a> <a href="#why-us" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Why Us</a> <a href="#contact" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Contact</a>
-      </div><a href="#contact" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold text-white text-xs sm:text-sm transition-all hover:scale-105" style="background: #10b981;"> Get Quote </a>
-     </div>
-    </div>
-   </nav><!-- Hero Section -->
-   <section class="gradient-bg relative overflow-hidden" style="min-height: 100%;">
-    <div class="absolute inset-0 opacity-10">
-     <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-     <div class="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400 rounded-full blur-3xl"></div>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-16 sm:pb-24">
-     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-      <div class="text-center lg:text-left">
-       <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.3);"><span class="w-2 h-2 rounded-full pulse-ring" style="background: #10b981;"></span> <span class="text-emerald-300 text-xs sm:text-sm font-medium">HIPAA-Compliant • On-Time • Secure</span>
-       </div>
-       <h1 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 sm:mb-6">Reliable Medical Courier Services You Can Trust</h1>
-       <p id="hero-subtitle" class="text-base sm:text-lg md:text-xl text-white/70 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0">HIPAA-Compliant • On-Time • Secure Medical Deliveries</p>
-       <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"><a href="#contact" class="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-white text-sm sm:text-base transition-all hover:scale-105 hover:shadow-xl" style="background: #10b981;"> <span>👉</span> Request a Quote 
-         <svg class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-         </svg></a> <a href="tel:7579498206" class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-white text-sm sm:text-base transition-all hover:scale-105 border-2 border-white/30 hover:border-white/50 hover:bg-white/10"> <span>📞</span> Call Now </a>
-       </div>
-      </div>
-      <div class="hidden lg:flex justify-center">
-       <div class="relative float-animation">
-        <div class="w-80 h-80 rounded-3xl p-8 flex items-center justify-center" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-         <svg class="w-48 h-48 text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-         </svg>
+</head>
+
+<body class="h-full bg-slate-50 text-slate-700">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-[#0f4c75]/95">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
+          ⚡
         </div>
-        <div class="absolute -top-4 -right-4 w-16 h-16 rounded-2xl flex items-center justify-center" style="background: #10b981;"><span class="text-2xl">🏥</span>
-        </div>
-        <div class="absolute -bottom-4 -left-4 w-16 h-16 rounded-2xl flex items-center justify-center" style="background: #0f4c75;"><span class="text-2xl">🚐</span>
-        </div>
-       </div>
+        <span class="text-xl font-bold text-white">MediGo</span>
       </div>
-     </div>
+
+      <div class="hidden md:flex gap-8 text-sm font-medium text-white/80">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#why-us" class="hover:text-white">Why Us</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </div>
+
+      <a href="#contact" class="px-6 py-2.5 bg-emerald-500 rounded-full text-white font-semibold text-sm hover:scale-105 transition">
+        Get Quote
+      </a>
     </div>
-    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-50 to-transparent"></div>
-   </section><!-- About Section -->
-   <section id="about" class="py-16 sm:py-20 lg:py-24" style="background: #f8fafc;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-12 sm:mb-16"><span class="inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">ABOUT MEDIGO</span>
-      <h2 id="about-title" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style="color: #0f4c75;">Who We Are</h2>
-     </div>
-     <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-      <div>
-       <div class="rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl" style="background: white;">
-        <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-6"><strong style="color: #0f4c75;">MediGo Couriers LLC</strong> is a professional medical courier company providing safe, secure, and timely transport of medical materials. We specialize in compliant deliveries for healthcare providers, laboratories, clinics, and government agencies.</p>
-        <p class="text-slate-600 text-base sm:text-lg leading-relaxed">We operate in full <strong style="color: #10b981;">HIPAA compliance</strong>, ensuring secure and confidential handling of all medical items through strict chain-of-custody procedures. MediGo Couriers LLC adheres to all applicable federal and state regulations governing the transport of Protected Health Information (PHI) and is fully insured to provide added protection and peace of mind for our clients.</p>
-       </div>
-      </div>
-      <div class="grid grid-cols-2 gap-3 sm:gap-4">
-       <div class="rounded-xl sm:rounded-2xl p-4 sm:p-6 card-hover" style="background: #0f4c75;">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center mb-3 sm:mb-4" style="background: rgba(16, 185, 129, 0.2);"><span class="text-xl sm:text-2xl">🛡️</span>
-        </div>
-        <h3 class="text-white font-bold text-sm sm:text-base mb-1 sm:mb-2">HIPAA Compliant</h3>
-        <p class="text-white/60 text-xs sm:text-sm">Full regulatory compliance</p>
-       </div>
-       <div class="rounded-xl sm:rounded-2xl p-4 sm:p-6 card-hover" style="background: #10b981;">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center mb-3 sm:mb-4" style="background: rgba(255,255,255,0.2);"><span class="text-xl sm:text-2xl">🔒</span>
-        </div>
-        <h3 class="text-white font-bold text-sm sm:text-base mb-1 sm:mb-2">Fully Insured</h3>
-        <p class="text-white/80 text-xs sm:text-sm">Complete protection</p>
-       </div>
-       <div class="rounded-xl sm:rounded-2xl p-4 sm:p-6 card-hover" style="background: #10b981;">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center mb-3 sm:mb-4" style="background: rgba(255,255,255,0.2);"><span class="text-xl sm:text-2xl">⚡</span>
-        </div>
-        <h3 class="text-white font-bold text-sm sm:text-base mb-1 sm:mb-2">On-Time</h3>
-        <p class="text-white/80 text-xs sm:text-sm">Reliable delivery</p>
-       </div>
-       <div class="rounded-xl sm:rounded-2xl p-4 sm:p-6 card-hover" style="background: #0f4c75;">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center mb-3 sm:mb-4" style="background: rgba(16, 185, 129, 0.2);"><span class="text-xl sm:text-2xl">📋</span>
-        </div>
-        <h3 class="text-white font-bold text-sm sm:text-base mb-1 sm:mb-2">Chain of Custody</h3>
-        <p class="text-white/60 text-xs sm:text-sm">Strict procedures</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Services Section -->
-   <section id="services" class="py-16 sm:py-20 lg:py-24" style="background: white;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-12 sm:mb-16"><span class="inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4" style="background: rgba(15, 76, 117, 0.1); color: #0f4c75;">SERVICES</span>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style="color: #0f4c75;">Our Services Include</h2>
-     </div>
-     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-      <div class="group rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-slate-100 hover:border-emerald-200 transition-all card-hover" style="background: #f8fafc;">
-       <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);"><span class="text-xl sm:text-2xl">🧪</span>
-       </div>
-       <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0f4c75;">Specimen &amp; Laboratory Transport</h3>
-       <p class="text-slate-500 text-sm sm:text-base">Safe and compliant transport of medical specimens and lab materials.</p>
-      </div>
-      <div class="group rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-slate-100 hover:border-emerald-200 transition-all card-hover" style="background: #f8fafc;">
-       <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);"><span class="text-xl sm:text-2xl">📁</span>
-       </div>
-       <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0f4c75;">Medical Records Delivery</h3>
-       <p class="text-slate-500 text-sm sm:text-base">Secure and confidential handling of sensitive medical documentation.</p>
-      </div>
-      <div class="group rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-slate-100 hover:border-emerald-200 transition-all card-hover" style="background: #f8fafc;">
-       <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);"><span class="text-xl sm:text-2xl">💊</span>
-       </div>
-       <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0f4c75;">Prescription &amp; Pharmacy Runs</h3>
-       <p class="text-slate-500 text-sm sm:text-base">Timely delivery of prescriptions and pharmaceutical products.</p>
-      </div>
-      <div class="group rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-slate-100 hover:border-emerald-200 transition-all card-hover" style="background: #f8fafc;">
-       <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);"><span class="text-xl sm:text-2xl">🏥</span>
-       </div>
-       <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0f4c75;">Hospital &amp; Clinic Courier Services</h3>
-       <p class="text-slate-500 text-sm sm:text-base">Dedicated courier services for healthcare facilities.</p>
-      </div>
-      <div class="group rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-slate-100 hover:border-emerald-200 transition-all card-hover" style="background: #f8fafc;">
-       <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);"><span class="text-xl sm:text-2xl">⏱️</span>
-       </div>
-       <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0f4c75;">STAT &amp; Scheduled Routes</h3>
-       <p class="text-slate-500 text-sm sm:text-base">Urgent deliveries and regular scheduled pickup routes.</p>
-      </div>
-      <div class="group rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-slate-100 hover:border-emerald-200 transition-all card-hover" style="background: #f8fafc;">
-       <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);"><span class="text-xl sm:text-2xl">🏛️</span>
-       </div>
-       <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0f4c75;">Government &amp; Contracted Deliveries</h3>
-       <p class="text-slate-500 text-sm sm:text-base">Specialized services for government agencies and contracts.</p>
-      </div>
-     </div>
-    </div>
-   </section><!-- Why Choose Us Section -->
-   <section id="why-us" class="py-16 sm:py-20 lg:py-24 gradient-bg relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-     <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-400 rounded-full blur-3xl"></div>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-12 sm:mb-16"><span class="inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4" style="background: rgba(16, 185, 129, 0.2); color: #10b981;">WHY CHOOSE US</span>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Why MediGo Couriers?</h2>
-      <p class="text-white/70 text-base sm:text-lg">HIPAA-Compliant | Secure &amp; Confidential Medical Deliveries</p>
-     </div>
-     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-      <div class="rounded-xl sm:rounded-2xl p-6 sm:p-8 card-hover" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-       <div class="flex items-center gap-3 sm:gap-4">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #10b981;">
-         <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-white font-semibold text-sm sm:text-base">Fully Insured (General Liability &amp; Commercial Auto)</span>
-       </div>
-      </div>
-      <div class="rounded-xl sm:rounded-2xl p-6 sm:p-8 card-hover" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-       <div class="flex items-center gap-3 sm:gap-4">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #10b981;">
-         <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-white font-semibold text-sm sm:text-base">HIPAA-Compliant Operations</span>
-       </div>
-      </div>
-      <div class="rounded-xl sm:rounded-2xl p-6 sm:p-8 card-hover" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-       <div class="flex items-center gap-3 sm:gap-4">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #10b981;">
-         <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-white font-semibold text-sm sm:text-base">Secure &amp; Confidential Handling of Medical Materials</span>
-       </div>
-      </div>
-      <div class="rounded-xl sm:rounded-2xl p-6 sm:p-8 card-hover" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-       <div class="flex items-center gap-3 sm:gap-4">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #10b981;">
-         <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-white font-semibold text-sm sm:text-base">Chain-of-Custody Procedures</span>
-       </div>
-      </div>
-      <div class="rounded-xl sm:rounded-2xl p-6 sm:p-8 card-hover" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-       <div class="flex items-center gap-3 sm:gap-4">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #10b981;">
-         <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-white font-semibold text-sm sm:text-base">Background-Checked Drivers</span>
-       </div>
-      </div>
-      <div class="rounded-xl sm:rounded-2xl p-6 sm:p-8 card-hover" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-       <div class="flex items-center gap-3 sm:gap-4">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #10b981;">
-         <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-white font-semibold text-sm sm:text-base">Timely &amp; Reliable Service</span>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Service Area Section -->
-   <section class="py-16 sm:py-20 lg:py-24" style="background: #f8fafc;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center"><span class="inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">SERVICE AREA</span>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6" style="color: #0f4c75;">Service Areas</h2>
-      <div class="max-w-2xl mx-auto">
-       <div class="rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg" style="background: white;">
-        <div class="flex justify-center mb-4 sm:mb-6">
-         <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #0f4c75, #1a237e);"><span class="text-3xl sm:text-4xl">📍</span>
-         </div>
-        </div>
-        <p class="text-slate-600 text-base sm:text-lg">We proudly serve local and regional healthcare facilities throughout the <strong style="color: #0f4c75;">Hampton Roads area</strong>.</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Contact / CTA Section -->
-   <section id="contact" class="py-16 sm:py-20 lg:py-24" style="background: white;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="rounded-2xl sm:rounded-3xl p-8 sm:p-12 lg:p-16 text-center gradient-bg relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10">
-       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-      </div>
-      <div class="relative">
-       <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">Need a Reliable Medical Courier?</h2>
-       <p class="text-white/70 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">Contact us today to discuss your medical courier needs. We're here to provide secure, compliant, and timely delivery services.</p>
-       <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-10"><a href="tel:7579498206" class="flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-white transition-all hover:scale-105" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3);"> <span>📞</span> <span>Call: <span id="phone-display">757-949-8206</span></span> </a> <a href="mailto:Medigo@medigocouriers.com" class="flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-white transition-all hover:scale-105" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3);"> <span>📧</span> <span id="email-display">Medigo@medigocouriers.com</span> </a>
-       </div><a href="mailto:Medigo@medigocouriers.com?subject=Quote Request" class="inline-flex items-center gap-2 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 hover:shadow-2xl" style="background: #10b981; color: white;"> <span>👉</span> Request a Quote Today 
-        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg></a>
-      </div>
-     </div>
-    </div>
-   </section><!-- Footer -->
-   <footer class="py-8 sm:py-12" style="background: #0d2137;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="flex flex-col items-center text-center">
-      <div class="flex items-center gap-3 mb-4">
-       <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: #10b981;">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-       </div><span class="text-xl font-bold text-white">MediGo Couriers LLC</span>
-      </div>
-      <p class="text-white/60 text-sm mb-4">HIPAA-Compliant Medical Courier Services</p>
-      <div class="w-16 h-px mb-4" style="background: rgba(255,255,255,0.2);"></div>
-      <p class="text-white/40 text-xs sm:text-sm">© 2026 MediGo Couriers LLC | All Rights Reserved</p>
-     </div>
-    </div>
-   </footer>
   </div>
-  <script>
-    const defaultConfig = {
-      hero_title: "Reliable Medical Courier Services You Can Trust",
-      hero_subtitle: "HIPAA-Compliant • On-Time • Secure Medical Deliveries",
-      about_title: "Who We Are",
-      phone_number: "757-949-8206",
-      email_address: "Medigo@medigocouriers.com",
-      primary_color: "#0f4c75",
-      secondary_color: "#10b981",
-      background_color: "#f8fafc",
-      text_color: "#334155",
-      accent_color: "#1a237e"
-    };
+</nav>
 
-    let config = { ...defaultConfig };
+<!-- HERO -->
+<section class="gradient-bg pt-40 pb-24 text-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 mb-8">
+        <span class="w-2 h-2 bg-emerald-400 rounded-full pulse-ring"></span>
+        <span class="text-emerald-200 text-sm">HIPAA • Secure • On-Time</span>
+      </div>
 
-    async function onConfigChange(cfg) {
-      config = { ...defaultConfig, ...cfg };
-      
-      // Update hero section
-      const heroTitle = document.getElementById('hero-title');
-      if (heroTitle) heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
-      
-      const heroSubtitle = document.getElementById('hero-subtitle');
-      if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
-      
-      // Update about section
-      const aboutTitle = document.getElementById('about-title');
-      if (aboutTitle) aboutTitle.textContent = config.about_title || defaultConfig.about_title;
-      
-      // Update contact info
-      const phoneDisplay = document.getElementById('phone-display');
-      if (phoneDisplay) phoneDisplay.textContent = config.phone_number || defaultConfig.phone_number;
-      
-      const emailDisplay = document.getElementById('email-display');
-      if (emailDisplay) emailDisplay.textContent = config.email_address || defaultConfig.email_address;
+      <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+        Reliable Medical Courier Services You Can Trust
+      </h1>
 
-      // Update colors
-      document.querySelectorAll('[style*="background: #0f4c75"]').forEach(el => {
-        el.style.background = config.primary_color || defaultConfig.primary_color;
-      });
-      
-      document.querySelectorAll('[style*="background: #10b981"]').forEach(el => {
-        el.style.background = config.secondary_color || defaultConfig.secondary_color;
-      });
-      
-      document.querySelectorAll('[style*="color: #0f4c75"]').forEach(el => {
-        el.style.color = config.primary_color || defaultConfig.primary_color;
-      });
-      
-      document.querySelectorAll('[style*="color: #10b981"]').forEach(el => {
-        el.style.color = config.secondary_color || defaultConfig.secondary_color;
-      });
-    }
+      <p class="text-white/70 text-lg mb-10 max-w-xl">
+        HIPAA-compliant transport for specimens, records, prescriptions, and medical materials.
+      </p>
 
-    function mapToCapabilities(cfg) {
-      return {
-        recolorables: [
-          {
-            get: () => cfg.background_color || defaultConfig.background_color,
-            set: (value) => {
-              cfg.background_color = value;
-              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
-            }
-          },
-          {
-            get: () => cfg.primary_color || defaultConfig.primary_color,
-            set: (value) => {
-              cfg.primary_color = value;
-              if (window.elementSdk) window.elementSdk.setConfig({ primary_color: value });
-            }
-          },
-          {
-            get: () => cfg.text_color || defaultConfig.text_color,
-            set: (value) => {
-              cfg.text_color = value;
-              if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
-            }
-          },
-          {
-            get: () => cfg.secondary_color || defaultConfig.secondary_color,
-            set: (value) => {
-              cfg.secondary_color = value;
-              if (window.elementSdk) window.elementSdk.setConfig({ secondary_color: value });
-            }
-          },
-          {
-            get: () => cfg.accent_color || defaultConfig.accent_color,
-            set: (value) => {
-              cfg.accent_color = value;
-              if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
-            }
-          }
-        ],
-        borderables: [],
-        fontEditable: undefined,
-        fontSizeable: undefined
-      };
-    }
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="px-8 py-4 bg-emerald-500 rounded-full font-bold hover:scale-105 transition">
+          Request a Quote
+        </a>
+        <a href="tel:7579498206" class="px-8 py-4 border border-white/30 rounded-full font-bold hover:bg-white/10 transition">
+          Call 757-949-8206
+        </a>
+      </div>
+    </div>
 
-    function mapToEditPanelValues(cfg) {
-      return new Map([
-        ["hero_title", cfg.hero_title || defaultConfig.hero_title],
-        ["hero_subtitle", cfg.hero_subtitle || defaultConfig.hero_subtitle],
-        ["about_title", cfg.about_title || defaultConfig.about_title],
-        ["phone_number", cfg.phone_number || defaultConfig.phone_number],
-        ["email_address", cfg.email_address || defaultConfig.email_address]
-      ]);
-    }
+    <div class="hidden lg:flex justify-center">
+      <div class="w-80 h-80 bg-white/10 backdrop-blur rounded-3xl flex items-center justify-center float-animation">
+        <span class="text-7xl">🏥</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
-    }
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-emerald-600 font-semibold text-sm">ABOUT MEDIGO</span>
+      <h2 class="text-4xl font-bold text-[#0f4c75] mt-3">Who We Are</h2>
+    </div>
 
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c07d9203565e5f0',t:'MTc2ODg0MTYwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <p class="text-lg leading-relaxed">
+        <strong>MediGo Couriers LLC</strong> provides secure, insured, and HIPAA-compliant medical courier services
+        for healthcare providers, labs, clinics, and government agencies throughout Hampton Roads.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 gradient-bg text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-6">Need a Reliable Medical Courier?</h2>
+    <p class="text-white/70 mb-10">
+      Contact MediGo Couriers today for secure, compliant delivery services.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="tel:7579498206" class="px-8 py-4 bg-white/20 rounded-full font-bold">
+        📞 757-949-8206
+      </a>
+      <a href="mailto:Medigo@medigocouriers.com" class="px-8 py-4 bg-white/20 rounded-full font-bold">
+        📧 Medigo@medigocouriers.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#0d2137] py-10 text-center text-white/50 text-sm">
+  © 2026 MediGo Couriers LLC. All Rights Reserved.
+</footer>
+
+</body>
 </html>
