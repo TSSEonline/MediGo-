@@ -1,2 +1,0 @@
-# MediGo-
-Medical supply carrier
